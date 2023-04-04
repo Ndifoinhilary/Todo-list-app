@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+ {% block content %}
+  
+     
+   <div class="container">
+    {% for post in posts %}
+    <a href="edit/{{post.pk}}" id="{{post.pk}}">{{post.title}}</a> <a href="delet/{{post.pk}}" id="{{post.pk}}">Delete</a><br>
+    <strong> {{post.use_date}}  {{post.priority_list}} </strong><br>
+    {{post.description}} <strong> {{post.updated}} </strong> <hr>
+     {% endfor %}
+
+   </div>
+
+
+   {% endblock %}
